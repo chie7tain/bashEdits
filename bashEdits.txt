@@ -1,0 +1,15 @@
+when you get a new laptop and want to edit your pS1 varible in your bash command prompt use the following settings 
+1.) 
+	a.) GIT_PS1_SHOWDIRTYSTATE=true //this would show an icon in your git directory in their edit state, i.e if a tracked file was modified, it would show the git directory and * symbol
+    [bashConfig (master *)]$
+	b.) GIT_PS1_SHOWUNTRACKEDFILES=true //this would show the + symbol beside the git directory and current git branch 
+	for example
+	[bashConfig (master +)]$:
+
+	c.) PS1='[\[\033[01;32m\]\W\[\033[00m\]\[\033[01;34m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")\[\033[00m\]]\$:' // this would edit your PS1 variable to show only the current working directory and the git directory if you are in a git directory
+    [bashConfig (master %)]$
+2.) Global settings for git
+git config --global user.name "Ifeanyi Fredrick Okwuobi"
+git config --global user.email "fredrickokwuobi@gmail.com"
+git config --global color.ui auto
+// just run the above commands or open up your ~/.bashrc and paste them inside to modify your bash settings
